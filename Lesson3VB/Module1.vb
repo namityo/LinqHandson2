@@ -8,11 +8,7 @@
 
 
         ' ここに書く
-        _cacheCountryName = country _
-            .Select(Function(l) l.Split(vbTab)) _
-            .Where(Function(s) s.Length > 2) _
-            .Select(Function(s) New With {.国名コード = s(0), .国名 = s(1), .日本語名 = s(2)}) _
-            .ToDictionary(Function(ci) ci.国名コード, Function(ci) ci.日本語名)
+        '_cacheCountryName
 
 
         '結果表示

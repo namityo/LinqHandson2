@@ -15,16 +15,14 @@ namespace LinqHandson2
 
 
             // ここに書く
-            var results = country
-                .Select(l => l.Split('\t'))
-                .Where(s => s.Length == 3)
-                .Select(s => new { 国名コード = s[0], 国名 = s[1], 日本語名 = s[2] });
+            var results = country;
 
 
             // 結果表示
             foreach (var ci in results)
             {
-                Console.WriteLine(string.Format("[{0}] {1}", ci.国名コード, ci.日本語名));
+                // 国名コードと日本語の国名を出力するように書く
+                Console.WriteLine(string.Format("結果出力を書く", ci));
             }
             Console.ReadKey();
         }

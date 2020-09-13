@@ -6,15 +6,13 @@
 
 
         ' ここに書く
-        Dim results = country _
-            .Select(Function(l) l.Split(vbTab)) _
-            .Where(Function(s) s.Length > 2) _
-            .Select(Function(s) New CountryInfo() With {.国名コード = s(0), .国名 = s(1), .日本語名 = s(2)})
+        Dim results = country
 
 
         '結果表示
         For Each ci In results
-            Console.WriteLine(String.Format("[{0}] {1}", ci.国名コード, ci.日本語名))
+            ' 国名コードと日本語の国名を出力するように書く
+            Console.WriteLine(String.Format("結果出力を書く", ci))
         Next
         Console.ReadKey()
     End Sub
